@@ -1,0 +1,42 @@
+Questions:
+1. When defining a method, when no return keyword is specified, what is the return value?
+
+ If no return keyword is specified, the object created by the last line in the method is automatically treated as the return value.
+
+
+2. What happens when you call the "return" keyword in the middle of a method?
+
+Calling return exits the method at that point. No code in the method after the return statement is executed.
+
+
+3. What method do you define to pass parameters into a new object?
+
+instance method
+
+
+4. How do you define a class method?
+
+class Foo
+  def self.bar
+    puts "class method"
+  end
+end
+
+Foo.bar
+
+
+5. How would you write attr_accessor, attr_reader, and attr_writer by hand?
+
+class Person
+  def name
+    @name
+  end
+
+  def name =(str)
+    @name = str
+  end
+end
+
+person = Person.new
+person.name = "Kim"
+person.name
